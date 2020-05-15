@@ -12,35 +12,20 @@ f.close()
 
 duplicates = [name_1 for name_1 in names_1 if name_1 in names_2]  # Return the list of duplicates in this data structure
 
-# other attempts: 
 # Replace the nested for loops below with your improvements
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
-# names_1_unique = [] 
-# for i in names_1: 
-#     if i not in names_1_unique: 
-#         names_1_unique.append(i)
-
-# names_2_unique = [] 
-# for i in names_2: 
-#     if i not in names_2_unique: 
-#         names_2_unique.append(i)
-
-# combined = names_1_unique + names_2_unique
 
 
-# for i in combined: 
-#     if i not in duplicates: 
-#         duplicates.append(i)
+#********** stretch ***************
+
+for name_1 in names_1:
+    if name_1 not in names_2:
+        names_1.remove(name_1)
 
 
-# Replace the nested for loops below with your improvements
-# for name_1 in names_1:
-#     for name_2 in names_2:
-#         if name_1 == name_2:
-#             duplicates.append(name_1)
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
